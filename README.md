@@ -1,2 +1,33 @@
 # C++-WORKSPACE
-basic problem
+basic problem and topics
+C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This C++ tutorial adopts a simple and practical approach to describe the concepts of C++ for beginners to advanded software engineers.
+
+<b>Why to Learn C++</b>
+<p>C++ is a MUST for students and working professionals to become a great Software Engineer. I will list down some of the key advantages of learning C++:
+<hr>
+C++ is very close to hardware, so you get a chance to work at a low level which gives you lot of control in terms of memory management, better performance and finally a robust software development.
+<hr>
+C++ programming gives you a clear understanding about Object Oriented Programming. You will understand low level implementation of polymorphism when you will implement virtual tables and virtual table pointers, or dynamic type identification.
+<hr>
+C++ is one of the every green programming languages and loved by millions of software developers. If you are a great C++ programmer then you will never sit without work and more importantly you will get highly paid for your work.
+<hr>
+C++ is the most widely used programming languages in application and system programming. So you can choose your area of interest of software development.
+<hr>
+C++ really teaches you the difference between compiler, linker and loader, different data types, storage classes, variable types their scopes etc.
+<hr>
+There are 1000s of good reasons to learn C++ Programming. But one thing for sure, to learn any programming language, not only C++, you just need to code, and code and finally code until you become expert.
+<hr></p>
+<b>Hello World using C++
+Just to give you a little excitement about C++ programming, I'm going to give you a small conventional C++ Hello World program, You can try it using Demo link
+
+C++ is a super set of C programming with additional implementation of object-oriented concepts.
+  <pre>
+#include <iostream>
+using namespace std;
+
+// main() is where program execution begins.
+int main() {
+   cout << "Hello World"; // prints Hello World
+   return 0;
+}</pre>
+<b>
