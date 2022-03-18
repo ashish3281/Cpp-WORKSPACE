@@ -1,7 +1,9 @@
 # C++-WORKSPACE
 basic problem and topics
+<br>
+<br>
 C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This C++ tutorial adopts a simple and practical approach to describe the concepts of C++ for beginners to advanded software engineers.
-
+<br>
 <h2>Why to Learn C++</h2>
 <p>C++ is a MUST for students and working professionals to become a great Software Engineer. I will list down some of the key advantages of learning C++:
 <hr>
@@ -30,8 +32,8 @@ int main() {
    cout << "Hello World"; // prints Hello World
    return 0;
 }</pre>
-<b>
-<h2>C++ Class Definitions</h2>
+<br>
+<br><h2>C++ Class Definitions</h2>
 <p>When you define a class, you define a blueprint for a data type. This doesn't actually define any data, but it does define what the class name means, that is, what an object of the class will consist of and what operations can be performed on such an object.
 
 A class definition starts with the keyword class followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations. For example, we defined the Box data type using the keyword class as follows −
@@ -45,7 +47,7 @@ class Box {
 };
 </pre>
 The keyword public determines the access attributes of the members of the class that follows it. A public member can be accessed from outside the class anywhere within the scope of the class object. You can also specify the members of a class as private or protected which we will discuss in a sub-section.
-
+<br>
 <h2>Define C++ Objects</h2>
 <p>A class provides the blueprints for objects, so basically an object is created from a class. We declare objects of a class with exactly the same sort of declaration that we declare variables of basic types. Following statements declare two objects of class Box −
 
@@ -98,3 +100,74 @@ int main() {
 Volume of Box1 : 210
 Volume of Box2 : 1560
 It is important to note that private and protected members can not be accessed directly using direct member access operator (.). We will learn how private and protected members can be accessed.</p>
+<br>
+<br>
+<h2>C++ Inheritance</h2>
+<p>One of the most important concepts in object-oriented programming is that of inheritance. Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application. This also provides an opportunity to reuse the code functionality and fast implementation time.
+
+When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the base class, and the new class is referred to as the derived class.
+
+The idea of inheritance implements the is a relationship. For example, mammal IS-A animal, dog IS-A mammal hence dog IS-A animal as well and so on.
+</p>
+<b>Base and Derived Classes</b>
+<p>A class can be derived from more than one classes, which means it can inherit data and functions from multiple base classes. To define a derived class, we use a class derivation list to specify the base class(es). A class derivation list names one or more base classes and has the form −
+
+class derived-class: access-specifier base-class
+Where access-specifier is one of public, protected, or private, and base-class is the name of a previously defined class. If the access-specifier is not used, then it is private by default.
+
+Consider a base class Shape and its derived class Rectangle as follows −
+</p>
+<pre>
+#include <iostream>
+ 
+using namespace std;
+
+// Base class
+class Shape {
+   public:
+      void setWidth(int w) {
+         width = w;
+      }
+      void setHeight(int h) {
+         height = h;
+      }
+      
+   protected:
+      int width;
+      int height;
+};
+
+// Derived class
+class Rectangle: public Shape {
+   public:
+      int getArea() { 
+         return (width * height); 
+      }
+};
+
+int main(void) {
+   Rectangle Rect;
+ 
+   Rect.setWidth(5);
+   Rect.setHeight(7);
+
+   // Print the area of the object.
+   cout << "Total area: " << Rect.getArea() << endl;
+
+   return 0;
+}
+
+When the above code is compiled and executed, it produces the following result −
+
+Total area: 35
+</pre>
+<b>Type of Inheritance</b>
+When deriving a class from a base class, the base class may be inherited through public, protected or private inheritance. The type of inheritance is specified by the access-specifier as explained above.
+
+We hardly use protected or private inheritance, but public inheritance is commonly used. While using different type of inheritance, following rules are applied −
+<hr>
+<b>Public Inheritance</b> − When deriving a class from a public base class, public members of the base class become public members of the derived class and protected members of the base class become protected members of the derived class. A base class's private members are never accessible directly from a derived class, but can be accessed through calls to the public and protected members of the base class.
+<hr>
+<b>Protected Inheritance</b> − When deriving from a protected base class, public and protected members of the base class become protected members of the derived class.
+<hr>
+<b>Private Inheritance</b> − When deriving from a private base class, public and protected members of the base class become private members of the derived class.
