@@ -611,3 +611,4 @@ Total 60
 </pre>
 <p>Above class adds numbers together, and returns the sum. The public members addNum and getTotal are the interfaces to the outside world and a user needs to know them to use the class. The private member total is something that is hidden from the outside world, but is needed for the class to operate properly.
 </p>
+
